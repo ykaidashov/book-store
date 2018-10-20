@@ -1,0 +1,31 @@
+{% extends 'layouts/main.html' %}
+
+{% block title %}
+List of books
+{% endblock%}
+
+{% block content %}
+
+<table class="table table-bordered table-hover">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Authors</th>
+        <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+    <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ book.title }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.authors.all|join:", " }}</td>
+        <td>{{ book.price }}$</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
