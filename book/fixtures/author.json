@@ -1,0 +1,58 @@
+[
+  {
+    "pk": 1,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Allen",
+      "last_name": "Downey"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Bruce",
+      "last_name": "Tate"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Michael",
+      "last_name": "Kerrisk"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Robert",
+      "last_name": "Chansler"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Eric",
+      "last_name": "Raymond"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Brian",
+      "last_name": "Kernighan"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "book.Author",
+    "fields": {
+      "first_name": "Dennis",
+      "last_name": "Ritchie"
+    }
+  }
+]

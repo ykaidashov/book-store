@@ -1,0 +1,75 @@
+[
+  {
+    "pk": 1,
+    "model": "book.Book",
+    "fields": {
+      "title": "How to Think Like a Computer Scientist: Learning with Python",
+      "isbn": "978-0971677500",
+      "authors": [
+        1
+      ],
+      "price": 24.02
+    }
+  },
+  {
+    "pk": 2,
+    "model": "book.Book",
+    "fields": {
+      "title": "Seven Languages in Seven Weeks",
+      "isbn": "978-1934356593",
+      "authors": [
+        2
+      ],
+      "price": 22.95
+    }
+  },
+  {
+    "pk": 3,
+    "model": "book.Book",
+    "fields": {
+      "title": "The Linux Programming Interface: A Linux and UNIX System Programming Handbook",
+      "isbn": "978-1593272203",
+      "authors": [
+        3
+      ],
+      "price": 78.10
+    }
+  },
+  {
+    "pk": 4,
+    "model": "book.Book",
+    "fields": {
+      "title": "The Architecture of Open Source Applications",
+      "isbn": "978-1257638017",
+      "authors": [
+        4
+      ],
+      "price": 35.00
+    }
+  },
+  {
+    "pk": 5,
+    "model": "book.Book",
+    "fields": {
+      "title": "The Art of UNIX Programming",
+      "isbn": "978-0131429017",
+      "authors": [
+        5
+      ],
+      "price": 44.81
+    }
+  },
+  {
+    "pk": 6,
+    "model": "book.Book",
+    "fields": {
+      "title": "C Programming Language (2nd Edition)",
+      "isbn": "978-0131103627",
+      "authors": [
+        6,
+        7
+      ],
+      "price": 63.12
+    }
+  }
+]
