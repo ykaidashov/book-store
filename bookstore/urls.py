@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from web_request.views import WebRequestList
+
 urlpatterns = [
     path('', include('book.urls')),
+    path('web_requests/', WebRequestList.as_view(), name='web_request_index_url'),
     path('admin/', admin.site.urls),
 ]

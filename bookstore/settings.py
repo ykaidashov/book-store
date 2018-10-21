@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'book',
+    'web_request',
 
     # Extensions
     'bootstrap_datepicker_plus',
@@ -50,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'web_request.middleware.WebRequestMiddleware'
 ]
 
 ROOT_URLCONF = 'bookstore.urls'

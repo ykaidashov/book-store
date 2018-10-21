@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<h1>Requests</h1>
+<table class="table table-bordered table-hover">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Host</th>
+        <th scope="col">Path</th>
+        <th scope="col">Method</th>
+        <th scope="col">Get data</th>
+        <th scope="col">Post data</th>
+        <th scope="col">Uri</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for request in object_list %}
+    <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ request.host }}</td>
+        <td>{{ request.path }}</td>
+        <td>{{ request.method }}</td>
+        <td>{{ request.get_data }}</td>
+        <td>{{ request.post_data }}</td>
+        <td>{{ request.uri }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="7">No requests yet.</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
