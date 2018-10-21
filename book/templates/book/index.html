@@ -5,7 +5,7 @@ List of books
 {% endblock%}
 
 {% block content %}
-
+<a href="{% url 'book_create_url' %}" class="btn btn-success mb-2 float-right">Create book</a>
 <table class="table table-bordered table-hover">
     <thead class="thead-light">
     <tr>
@@ -14,6 +14,7 @@ List of books
         <th scope="col">ISBN</th>
         <th scope="col">Authors</th>
         <th scope="col">Price</th>
+        <th scope="col">Edit</th>
     </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@ List of books
         <td>{{ book.isbn }}</td>
         <td>{{ book.authors.all|join:", " }}</td>
         <td>{{ book.price }}$</td>
+        <td><a href="{{ book.get_update_url }}">Update</a></td>
     </tr>
     {% endfor %}
     </tbody>
