@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load site_copyright %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sticky-footer-navbar.css' %}">
     {% block css %}{% endblock %}
 
     <title>{% block title %} Books {% endblock title %}</title>
@@ -42,6 +44,13 @@
         </div>
     </div>
 </div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">{% copyright %}</span>
+    </div>
+</footer>
+
 <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 {% block javascript %}{% endblock %}

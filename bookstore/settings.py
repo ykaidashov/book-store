@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'book',
     'web_request',
+    'copyright',
 
     # Extensions
     'bootstrap_datepicker_plus',
