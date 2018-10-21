@@ -1,4 +1,5 @@
 {% extends 'layouts/main.html' %}
+{% load admin_urls %}
 
 {% block title %}
 List of books
@@ -15,6 +16,7 @@ List of books
         <th scope="col">Authors</th>
         <th scope="col">Price</th>
         <th scope="col">Edit</th>
+        <th scope="col">Admin edit</th>
     </tr>
     </thead>
     <tbody>
@@ -26,8 +28,11 @@ List of books
         <td>{{ book.authors.all|join:", " }}</td>
         <td>{{ book.price }}$</td>
         <td><a href="{{ book.get_update_url }}">Update</a></td>
+        <td><a href="{% url 'admin:book_book_change' book.id %}">Update</a></td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
+<p><a href="{% url 'admin:book_book_changelist'%}" class="btn btn-info">Admin books</a></p>
+<p><a href="{% url 'admin:book_author_changelist'%}" class="btn btn-info">Admin authors</a></p>
 {% endblock %}
