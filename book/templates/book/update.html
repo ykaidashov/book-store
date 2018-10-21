@@ -18,3 +18,11 @@
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
 {% endblock %}
+
+{% block javascript %}
+{{ form.media.js }}
+{% endblock %}
+
+{% block css %}
+{{ form.media.css }}
+{% endblock %}

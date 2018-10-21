@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.core.exceptions import ValidationError
+from django.utils import timezone
 from stdnum import isbn, exceptions
 
 
@@ -27,8 +28,8 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=200)
     isbn = models.CharField(max_length=14, validators=[isbn_validator])
-
     authors = models.ManyToManyField(Author, related_name='books')
+    publish_date = models.DateField(default=timezone.now)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def get_absolute_url(self):
