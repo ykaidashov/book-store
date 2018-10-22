@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views.generic import View
 
 from book.models import Book
@@ -42,3 +42,15 @@ class BookUpdate(View):
             return redirect(updated_book)
 
         return render(request, 'book/update.html', {'form': bound_form, 'book': book})
+
+
+class BookDelete(View):
+
+    def get(self, request, book_id):
+        book = Book.objects.get(id=book_id)
+        return render(request, 'book/delete.html', {'book': book})
+
+    def post(self, request, book_id):
+        book = Book.objects.get(id=book_id)
+        book.delete()
+        return redirect(reverse('book_index_url'))

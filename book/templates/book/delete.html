@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+
+{% block content %}
+<h1 class="text-center">Delete book</h1>
+<form method="post" action="{{ book.get_delete_url }}">
+
+    {% csrf_token %}
+
+    <p>Are you sure you want to delete "{{ book.title }}" book?</p>
+
+    <a href="{{ book.get_absolute_url }}" class="btn btn-link">Cancel</a>
+    <button type="submit" class="btn btn-danger">Delete</button>
+
+</form>
+{% endblock %}

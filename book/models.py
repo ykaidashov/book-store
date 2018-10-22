@@ -38,5 +38,8 @@ class Book(models.Model):
     def get_update_url(self):
         return reverse('book_update_url', kwargs={'book_id': self.id})
 
+    def get_delete_url(self):
+        return reverse('book_delete_url', kwargs={'book_id': self.id})
+
     def __str__(self):
         return self.title

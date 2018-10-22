@@ -17,6 +17,7 @@ List of books
         <th scope="col">Price</th>
         <th scope="col">Edit</th>
         <th scope="col">Admin edit</th>
+        <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -29,6 +30,7 @@ List of books
         <td>{{ book.price }}$</td>
         <td><a href="{{ book.get_update_url }}">Update</a></td>
         <td><a href="{% url 'admin:book_book_change' book.id %}">Update</a></td>
+        <td><a href="{{ book.get_delete_url }}">Delete</a></td>
     </tr>
     {% endfor %}
     </tbody>
